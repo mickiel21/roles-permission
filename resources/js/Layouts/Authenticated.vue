@@ -25,11 +25,29 @@ const showingNavigationDropdown = ref(false);
                                 </Link>
                             </div>
 
-                            <!-- Navigation Links -->
+                           <!-- Navigation Links -->
                             <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                                <BreezeNavLink :href="route('home')" :active="route().current('home')">
+                                    Home
+                                </BreezeNavLink>
                                 <BreezeNavLink :href="route('dashboard')" :active="route().current('dashboard')">
                                     Dashboard
                                 </BreezeNavLink>
+                                <BreezeNavLink :href="route('user.index')" :active="route().current('user.index')">
+                                    Users
+                                </BreezeNavLink>
+                                <BreezeNavLink :href="route('permission.index')" :active="route().current('permission.index')">
+                                    Permission
+                                </BreezeNavLink>
+                                <BreezeNavLink :href="route('role.index')" :active="route().current('role.index')">
+                                    Role
+                                </BreezeNavLink>
+                                <BreezeNavLink :href="route('post.index')" :active="route().current('post.index')">
+                                    Post
+                                </BreezeNavLink>
+                                <a class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out" href="https://laraveltuts.com" :class="classes">
+                                    LaravelTuts
+                                </a>
                             </div>
                         </div>
 
